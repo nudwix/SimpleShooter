@@ -27,7 +27,12 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 private:
+	UPROPERTY(EditAnywhere)
+	float GamepadRotationRate {50.0f};
+
 	void MoveForward(float AxisValue);
 	void MoveRight(float AxisValue);
+	void LookUpGamepad(float AxisValue);
+	void LookRightGamepad(float AxisValue);
 	
 };
